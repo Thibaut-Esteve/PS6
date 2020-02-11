@@ -1,0 +1,16 @@
+<div class="card">
+    <h2>
+
+        <i class="fas fa-film" *ngIf = "quiz.theme === 'Actor'"></i>
+        <i class="fas fa-running" *ngIf = "quiz.theme === 'Sport'"></i>
+        Nom :{{quiz.name}}
+        
+    </h2>
+    <h3>
+        <span> Theme: {{quiz.theme}}</span>
+    </h3>
+    <button class="button-card" (click)="selectQuiz()">Select</button>
+    <h4>
+        <span> Nb de questions: {{quiz.questions.length}}</span>
+    </h4>
+</div>

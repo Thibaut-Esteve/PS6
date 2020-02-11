@@ -1,0 +1,19 @@
+<div class="card">
+    <h1>
+        <i class="fas fa-film" *ngIf = "quiz.theme === 'Actor'"></i>
+        <i class="fas fa-running" *ngIf = "quiz.theme === 'Sport'"></i>
+        Nom : {{quiz.name}}
+    </h1>
+    
+    <span>
+        Nb : {{quiz.questions.length}}
+    </span>
+    <br>
+    <span> Theme : {{quiz.theme}} </span>
+    <br>
+    <span *ngIf = "quiz.date != null"> Date : {{quiz.date | date:'dd/MM/yy HH:mm'}} </span>
+    <br>
+    <button class="button-card" (click)="selectQuiz()">Select</button>
+    <br> 
+    <button class="button-card" (click)="deleteQuiz()">Delete</button>
+</div>
